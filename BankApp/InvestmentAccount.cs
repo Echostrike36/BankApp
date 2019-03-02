@@ -11,12 +11,13 @@ namespace BankApp
         public static double WithdrawlLimit { get; set; } = 6;
         public double MonthlyNumberOfWithdrawls { get; private set; }
 
-        public InvestmentAccount(Guid customerId)
+        public InvestmentAccount(Guid customerId, IAccountOptions accountOptions)
         {
             // Simulate loading from database
             AccountNumber = new Guid();
             Balance = 5000.00;
             MonthlyNumberOfWithdrawls = 4;
+            InterestRate = accountOptions.InterestRate;
         }
 
         public override void Withdrawl(double amount)
