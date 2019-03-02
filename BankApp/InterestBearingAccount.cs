@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BankApp
 {
-    class InterestBearingAccount : BaseAccount
+    abstract class InterestBearingAccount : BaseAccount
     {
-        public double InterestRate { get; set; }
+        public virtual double InterestRate { get; private protected set; }
     }
 }

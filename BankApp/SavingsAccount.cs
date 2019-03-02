@@ -4,9 +4,9 @@ using System.Text;
 
 namespace BankApp
 {
-    class SavingsAccount : BaseAccount
+    class SavingsAccount : InterestBearingAccount
     {
-        public static double InterestRate { get; set; } = 0.01;
+        public override double InterestRate { get; private protected set; } = 0.01;
 
         public SavingsAccount(Guid customerId)
         {

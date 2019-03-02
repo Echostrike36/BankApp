@@ -6,8 +6,8 @@ namespace BankApp
 {
     abstract class BaseAccount
     {
-        public double Balance { get; protected set; }
-        public Guid AccountNumber { get; protected set; }
+        public double Balance { get; private protected set; }
+        public Guid AccountNumber { get; private protected set; }
 
         public virtual void Withdrawl(double amount)
         {
