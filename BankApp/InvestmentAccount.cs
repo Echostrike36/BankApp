@@ -14,6 +14,7 @@ namespace BankApp
         public InvestmentAccount(Guid customerId)
         {
             // Simulate loading from database
+            AccountNumber = new Guid();
             Balance = 5000.00;
             MonthlyNumberOfWithdrawls = 4;
         }

@@ -9,6 +9,7 @@ namespace BankApp
         public CheckingAccount(Guid customerId)
         {
             // Simulate pulling from database
+            AccountNumber = new Guid();
             Balance = 50.00;
         }
     }

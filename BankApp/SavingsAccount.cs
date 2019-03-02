@@ -11,6 +11,7 @@ namespace BankApp
         public SavingsAccount(Guid customerId)
         {
             // Simulate loading from database
+            AccountNumber = new Guid();
             Balance = 500.00;
         }
 
