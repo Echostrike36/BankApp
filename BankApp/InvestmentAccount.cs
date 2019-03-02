@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankApp
 {
-    class InvestmentAccount : Account
+    class InvestmentAccount : BaseAccount
     {
         public double InterestRate { get; set; } = 0.10;
         public static double WithdrawlPenalty { get; private set; } = 0.18;

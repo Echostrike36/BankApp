@@ -6,7 +6,7 @@ namespace BankApp
 {
     class BalanceTransfer
     {
-        public void TransferBalance(Account withdralAccount, Account depositAccount, int amount)
+        public void TransferBalance(BaseAccount withdralAccount, BaseAccount depositAccount, int amount)
         {
             withdralAccount.Withdrawl(amount);
             depositAccount.Deposit(amount);

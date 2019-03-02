@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankApp
 {
-    class SavingsAccount : Account
+    class SavingsAccount : BaseAccount
     {
         public static double InterestRate { get; set; } = 0.01;
 

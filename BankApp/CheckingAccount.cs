@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankApp
 {
-    class CheckingAccount : Account
+    class CheckingAccount : BaseAccount
     {
         public CheckingAccount(Guid customerId)
         {
