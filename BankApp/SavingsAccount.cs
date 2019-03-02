@@ -8,7 +8,7 @@ namespace BankApp
     {
         public override double InterestRate { get; private protected set; } = 0.01;
 
-        public SavingsAccount(Guid customerId, IAccountOptions accountOptions)
+        public SavingsAccount(Guid customerId, IInterestBearingAccountOptions accountOptions)
         {
             // Simulate loading from database
             AccountNumber = new Guid();

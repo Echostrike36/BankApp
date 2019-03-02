@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankApp
 {
-    interface IAccountOptions
+    interface IInterestBearingAccountOptions
     {
         double InterestRate { get; }
     }

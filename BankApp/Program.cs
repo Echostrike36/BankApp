@@ -7,11 +7,11 @@ namespace BankApp
         static void Main(string[] args)
         {
             Guid customer1 = new Guid();
-            IAccountOptions savingsAccountOptions = new SavingsAccountOptions(0.01);
-            IAccountOptions investmentAccountOptions = new InvestmentAccountOptions(0.01);
+            IInterestBearingAccountOptions savingsAccountOptions = new SavingsAccountOptions();
+            IInvestmentAccountOptions investmentAccountOptions = new InvestmentAccountOptions();
 
             SavingsAccount savings = new SavingsAccount(customer1, savingsAccountOptions);
-            InvestmentAccount investment = new InvestmentAccount(customer1);
+            InvestmentAccount investment = new InvestmentAccount(customer1, investmentAccountOptions);
             CheckingAccount checking = new CheckingAccount(customer1);
             Console.WriteLine($"Savings Balance == {savings.Balance}");
             Console.WriteLine($"Checking Balance == {checking.Balance}");

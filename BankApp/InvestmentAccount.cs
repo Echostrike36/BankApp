@@ -6,18 +6,19 @@ namespace BankApp
 {
     class InvestmentAccount : InterestBearingAccount
     {
-        public override double InterestRate { get; private protected set; } = 0.10;
-        public static double WithdrawlPenalty { get; private set; } = 0.18;
-        public static double WithdrawlLimit { get; set; } = 6;
+        public static double WithdrawlLimit { get; private set; }
+        public static double WithdrawlPenalty { get; private set; }
         public double MonthlyNumberOfWithdrawls { get; private set; }
 
-        public InvestmentAccount(Guid customerId, IAccountOptions accountOptions)
+        public InvestmentAccount(Guid customerId, IInvestmentAccountOptions accountOptions)
         {
             // Simulate loading from database
             AccountNumber = new Guid();
             Balance = 5000.00;
             MonthlyNumberOfWithdrawls = 4;
             InterestRate = accountOptions.InterestRate;
+            WithdrawlLimit = accountOptions.WithdrawlLimit;
+            WithdrawlPenalty = accountOptions.WithdrawlPenalty;
         }
 
         public override void Withdrawl(double amount)
